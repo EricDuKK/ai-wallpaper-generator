@@ -12,40 +12,23 @@
     },
     "nav": {
       "items": [
-        {
-          "title": "Features",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
-        },
+
         {
           "title": "Pricing",
           "url": "/pricing",
           "icon": "RiMoneyDollarCircleLine"
         },
         {
-          "title": "Showcase",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
-        },
-        {
-          "title": "Docs",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
+          "title": "Post",
+          "url": "/posts",
+          "icon": "RiMoneyDollarCircleLine"
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "Generate Wallpaper",
-        "url": "/app",
-        "target": "_self",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
+    "buttons": [],
     "show_sign": true,
-    "show_theme": true,
-    "show_locale": true
+    "show_theme": false,
+    "show_locale": false
   },
   "hero": {
     "title": "AI Wallpaper Generator",

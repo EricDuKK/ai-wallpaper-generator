@@ -100,9 +100,9 @@ export const posts = pgTable("posts", {
   created_at: timestamp({ withTimezone: true }),
   updated_at: timestamp({ withTimezone: true }),
   status: varchar({ length: 50 }),
-  cover_url: varchar({ length: 255 }),
+  cover_url: text(),
   author_name: varchar({ length: 255 }),
-  author_avatar_url: varchar({ length: 255 }),
+  author_avatar_url: text(),
   locale: varchar({ length: 50 }),
 });
 

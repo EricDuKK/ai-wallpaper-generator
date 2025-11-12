@@ -1,5 +1,5 @@
 import { feedbacks } from "@/db/schema";
-import { db } from "@/db";
+import { db, resetDbConnection } from "@/db";
 import { getUsersByUuids } from "./user";
 import { desc, eq } from "drizzle-orm";
 
@@ -50,7 +50,25 @@ export async function getFeedbacks(
 }
 
 export async function getFeedbacksTotal(): Promise<number | undefined> {
-  const total = await db().$count(feedbacks);
-
-  return total;
+  try {
+    const total = await db().$count(feedbacks);
+    return total;
+  } catch (error: any) {
+    console.error("Failed to get feedbacks total:", error);
+    
+    // If connection is closed, reset and retry once
+    if (error?.code === "CONNECTION_CLOSED" || error?.message?.includes("CONNECTION_CLOSED")) {
+      resetDbConnection();
+      try {
+        const retryTotal = await db().$count(feedbacks);
+        return retryTotal;
+      } catch (retryError) {
+        console.error("Retry failed to get feedbacks total:", retryError);
+        return 0;
+      }
+    }
+    
+    // Return 0 as fallback instead of undefined to prevent UI errors
+    return 0;
+  }
 }

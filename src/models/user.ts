@@ -1,5 +1,5 @@
 import { users } from "@/db/schema";
-import { db } from "@/db";
+import { db, resetDbConnection } from "@/db";
 import { desc, eq, gte, inArray } from "drizzle-orm";
 
 export async function insertUser(
@@ -111,9 +111,27 @@ export async function getUserUuidsByEmail(
 }
 
 export async function getUsersTotal(): Promise<number> {
-  const total = await db().$count(users);
-
-  return total;
+  try {
+    const total = await db().$count(users);
+    return total;
+  } catch (error: any) {
+    console.error("Failed to get users total:", error);
+    
+    // If connection is closed, reset and retry once
+    if (error?.code === "CONNECTION_CLOSED" || error?.message?.includes("CONNECTION_CLOSED")) {
+      resetDbConnection();
+      try {
+        const retryTotal = await db().$count(users);
+        return retryTotal;
+      } catch (retryError) {
+        console.error("Retry failed to get users total:", retryError);
+        return 0;
+      }
+    }
+    
+    // Return 0 as fallback to prevent UI errors
+    return 0;
+  }
 }
 
 export async function getUserCountByDate(

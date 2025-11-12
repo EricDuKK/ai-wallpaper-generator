@@ -1,5 +1,5 @@
 import { orders } from "@/db/schema";
-import { db } from "@/db";
+import { db, resetDbConnection } from "@/db";
 import { asc, desc, eq, gte } from "drizzle-orm";
 import { and } from "drizzle-orm";
 
@@ -197,9 +197,27 @@ export async function getPaiedOrders(
 }
 
 export async function getPaidOrdersTotal(): Promise<number | undefined> {
-  const total = await db().$count(orders);
-
-  return total;
+  try {
+    const total = await db().$count(orders);
+    return total;
+  } catch (error: any) {
+    console.error("Failed to get paid orders total:", error);
+    
+    // If connection is closed, reset and retry once
+    if (error?.code === "CONNECTION_CLOSED" || error?.message?.includes("CONNECTION_CLOSED")) {
+      resetDbConnection();
+      try {
+        const retryTotal = await db().$count(orders);
+        return retryTotal;
+      } catch (retryError) {
+        console.error("Retry failed to get paid orders total:", retryError);
+        return 0;
+      }
+    }
+    
+    // Return 0 as fallback instead of undefined to prevent UI errors
+    return 0;
+  }
 }
 
 export async function getOrderCountByDate(

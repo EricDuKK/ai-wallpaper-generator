@@ -140,9 +140,9 @@ export default async function ({
         const locale = data.get("locale") as string;
         const status = data.get("status") as string;
         const description = data.get("description") as string;
-        const cover_url = data.get("cover_url") as string;
+        let cover_url = data.get("cover_url") as string;
         const author_name = data.get("author_name") as string;
-        const author_avatar_url = data.get("author_avatar_url") as string;
+        let author_avatar_url = data.get("author_avatar_url") as string;
         const content = data.get("content") as string;
 
         if (
@@ -154,6 +154,24 @@ export default async function ({
           !locale.trim()
         ) {
           throw new Error("invalid form data");
+        }
+
+        // Validate and handle base64 images
+        // If cover_url is a base64 data URL, it's too long for varchar(255)
+        // We'll keep it as is since we changed the schema to text()
+        // But we can add a warning or validation if needed
+        if (cover_url && cover_url.startsWith("data:")) {
+          // Base64 data URLs are now supported with text() field type
+          // But we should recommend uploading to a storage service for better performance
+          if (cover_url.length > 100000) {
+            throw new Error("Cover image is too large. Please upload to a storage service and use the URL instead.");
+          }
+        }
+
+        if (author_avatar_url && author_avatar_url.startsWith("data:")) {
+          if (author_avatar_url.length > 100000) {
+            throw new Error("Author avatar image is too large. Please upload to a storage service and use the URL instead.");
+          }
         }
 
         const existPost = await findPostBySlug(slug, locale);
