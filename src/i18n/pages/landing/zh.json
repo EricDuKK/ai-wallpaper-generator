@@ -1,0 +1,480 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "AI Wallpaper",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "AI Wallpaper"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "功能亮点",
+          "url": "/#feature",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "定价",
+          "url": "/pricing",
+          "icon": "RiMoneyDollarCircleLine"
+        },
+        {
+          "title": "灵感图库",
+          "url": "/showcase",
+          "icon": "RiApps2Line"
+        },
+        {
+          "title": "文档",
+          "url": "/docs",
+          "icon": "RiBookOpenLine"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "立即生成壁纸",
+        "url": "/app",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiArrowRightUpLine"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "AI Wallpaper Generator",
+    "highlight_text": "AI Wallpaper",
+    "description": "输入一句灵感或上传参考图，AI 即刻生成绚丽的 4K 壁纸。随心混搭风格、光影与色彩，几秒内获得令人惊叹的效果。",
+    "announcement": {
+      "label": "Product Hunt",
+      "title": "🎉 设计工具榜单热门",
+      "url": "https://www.producthunt.com/products/ai-wallpaper"
+    },
+    "tip": "目前已生成 1538 张 AI 壁纸",
+    "buttons": [
+      {
+        "title": "立即生成壁纸",
+        "icon": "RiFlashlightFill",
+        "url": "/app",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "查看定价",
+        "icon": "RiMoneyDollarCircleLine",
+        "url": "/pricing",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": true,
+    "show_badge": true
+  },
+  "branding": {
+    "title": "由顶尖创意技术驱动",
+    "items": [
+      {
+        "title": "Next.js",
+        "image": {
+          "src": "/imgs/logos/nextjs.svg",
+          "alt": "Next.js"
+        }
+      },
+      {
+        "title": "React",
+        "image": {
+          "src": "/imgs/logos/react.svg",
+          "alt": "React"
+        }
+      },
+      {
+        "title": "TailwindCSS",
+        "image": {
+          "src": "/imgs/logos/tailwindcss.svg",
+          "alt": "TailwindCSS"
+        }
+      },
+      {
+        "title": "Shadcn/UI",
+        "image": {
+          "src": "/imgs/logos/shadcn.svg",
+          "alt": "Shadcn/UI"
+        }
+      },
+      {
+        "title": "Vercel",
+        "image": {
+          "src": "/imgs/logos/vercel.svg",
+          "alt": "Vercel"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是 AI Wallpaper Generator",
+    "label": "介绍",
+    "description": "AI Wallpaper Generator 帮你把脑海中的灵感转化为震撼的桌面与移动端壁纸，拥有电影级光影、纯净细节和无限风格组合。",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "items": [
+      {
+        "title": "精选风格预设",
+        "description": "从霓虹赛博、国潮、动漫到极简等多种预设中挑选，轻松获得壁纸级构图。",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "智能提示助手",
+        "description": "输入关键词即可获得 AI 提示词建议，补充场景、光影与材质，效果更精准。",
+        "icon": "RiLightbulbFlashLine"
+      },
+      {
+        "title": "多终端分辨率",
+        "description": "支持 4K、超宽屏与手机比例导出，细节清晰无锯齿。",
+        "icon": "RiComputerFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "创作者们为何选择 AI Wallpaper Generator",
+    "label": "优势",
+    "description": "从灵感激发到交付发布，全面赋能你的壁纸创作流程。",
+    "items": [
+      {
+        "title": "影棚级画质",
+        "description": "经过精调的扩散模型，呈现自然光感、干净细节与平衡构图，适配任何显示器。",
+        "icon": "RiImageFill",
+        "image": {
+          "src": "/imgs/features/2.png"
+        }
+      },
+      {
+        "title": "自动批量变体",
+        "description": "批量生成不同配色、比例与种子，只需几秒即可比较多组方案。",
+        "icon": "RiGridFill",
+        "image": {
+          "src": "/imgs/features/3.png"
+        }
+      },
+      {
+        "title": "协作收藏夹",
+        "description": "与团队或社群共享灵感板，点赞投票后即可一键打包交付。",
+        "icon": "RiTeamFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "3 步生成理想壁纸",
+    "description": "把灵感落地，只需要短短几分钟：",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "描述你的画面",
+        "description": "输入一句话或选择灵感模板，明确场景、氛围与主体。",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "实时调整风格",
+        "description": "自由切换比例、风格预设、种子与配色，边调边看即时预览。",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "下载或分享",
+        "description": "导出清晰的 4K 壁纸，设置设备轮播，并生成可分享的合集链接。",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "AI Wallpaper Generator 核心能力",
+    "description": "让壁纸创意快速落地、不断迭代、轻松交付。",
+    "items": [
+      {
+        "title": "提示词灵感库",
+        "description": "浏览 200+ 精选提示词，按情绪、主题、光影标签分类，快速找到灵感。",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "一键超分",
+        "description": "一键升级到 4K/8K，细节更锐利，构图不变形。",
+        "icon": "RiZoomInLine"
+      },
+      {
+        "title": "批量渲染队列",
+        "description": "同时排队多个提示词与比例，统一图库中对比结果。",
+        "icon": "RiStackLine"
+      },
+      {
+        "title": "自适应配色建议",
+        "description": "AI 根据品牌或参考图自动推荐互补配色，保持整体和谐。",
+        "icon": "RiPaletteLine"
+      },
+      {
+        "title": "云端合集",
+        "description": "将作品整理成可分享的合集，支持密码保护与下载统计。",
+        "icon": "RiFolderSharedLine"
+      },
+      {
+        "title": "跨设备同步",
+        "description": "桌面、平板与手机自动同步壁纸轮播，按日程刷新。",
+        "icon": "RiRefreshLine"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "统计",
+    "title": "AI Wallpaper Generator 的成长数据",
+    "description": "创作者社区共同打造的灵感宇宙。",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "已生成壁纸",
+        "label": "1538+",
+        "description": "来自全球创作者"
+      },
+      {
+        "title": "可用风格预设",
+        "label": "120",
+        "description": "持续更新中"
+      },
+      {
+        "title": "平均生成时长",
+        "label": "6 秒",
+        "description": "从提示到预览"
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "用户评价",
+    "title": "创作者都在使用 AI Wallpaper Generator",
+    "description": "设计师、主播与社群主理人分享他们的真实体验。",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Lena Park",
+        "label": "动效设计师",
+        "description": "过去做壁纸提案要花好几个小时，现在几分钟就能产出五套方案，并在同一天交付客户。",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "Marco Nguyen",
+        "label": "游戏社区运营者",
+        "description": "我们 Discord 每周的壁纸投票热度飙升。批量渲染和定时发布省下了我大量熬夜时间。",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "Sofia Romero",
+        "label": "极简风创作者",
+        "description": "配色建议准得惊人，品牌色保持一致，导出到各种设备都保持高清细腻。",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "Haruki Tanaka",
+        "label": "YouTube 主播",
+        "description": "直播时和观众一起调壁纸，实时预览超有互动感，生成后立刻就能打包分享。",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "常见问题解答",
+    "description": "还有疑问？欢迎通过 Discord 或邮件联系我们，我们会尽快回复。",
+    "items": [
+      {
+        "title": "AI Wallpaper Generator 是什么？",
+        "description": "这是一款 AI 驱动的壁纸创作工作室。描述你的灵感、挑选预设，即可在数秒内获得高分辨率壁纸。"
+      },
+      {
+        "title": "可以上传参考图吗？",
+        "description": "当然可以。上传照片、色卡或品牌素材，模型会在保持构图平衡的同时匹配你的风格。"
+      },
+      {
+        "title": "支持哪些分辨率？",
+        "description": "支持 4K、5K、超宽屏、手机以及自定义比例，生成后可随时一键超分到 8K。"
+      },
+      {
+        "title": "生成的壁纸版权归谁所有？",
+        "description": "完全属于你。可以用于商业项目、社群分享或售卖你的壁纸包。"
+      },
+      {
+        "title": "有没有免费试用？",
+        "description": "注册即可获得 10 个免费积分，体验完整的生成、预设和导出流程，再决定是否升级付费计划。"
+      },
+      {
+        "title": "积分如何计算？",
+        "description": "标准渲染消耗 1 个积分。超分、批量渲染与变体会额外消耗积分，所有扣费都会在仪表盘透明显示。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "现在就让屏幕焕然一新",
+    "description": "加入全球创作者，一起用 AI Wallpaper Generator 解锁无限灵感。",
+    "buttons": [
+      {
+        "title": "立即生成壁纸",
+        "url": "/app",
+        "target": "_self",
+        "icon": "GoArrowUpRight"
+      },
+      {
+        "title": "查看定价",
+        "url": "/pricing",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "AI Wallpaper",
+      "description": "AI Wallpaper Generator 让你在几秒内创作具有电影质感的桌面与移动壁纸，灵感随时上线。",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "AI Wallpaper"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • AI Wallpaper 保留所有权利。",
+    "nav": {
+      "items": [
+        {
+          "title": "产品",
+          "children": [
+            {
+              "title": "功能亮点",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "灵感图库",
+              "url": "/showcase",
+              "target": "_self"
+            },
+            {
+              "title": "定价",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "资源",
+          "children": [
+            {
+              "title": "文档",
+              "url": "/docs",
+              "target": "_self"
+            },
+            {
+              "title": "更新日志",
+              "url": "/docs/changelog",
+              "target": "_self"
+            },
+            {
+              "title": "API",
+              "url": "/docs/api",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "社区",
+          "children": [
+            {
+              "title": "Discord",
+              "url": "https://discord.gg/HQNnrzjZQS",
+              "target": "_blank"
+            },
+            {
+              "title": "Product Hunt",
+              "url": "https://www.producthunt.com/products/ai-wallpaper",
+              "target": "_blank"
+            },
+            {
+              "title": "Twitter",
+              "url": "https://x.com/aiwallpaper",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/aiwallpaper",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/ai-wallpaper",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/HQNnrzjZQS",
+          "target": "_blank"
+        },
+        {
+          "title": "邮箱",
+          "icon": "RiMailLine",
+          "url": "mailto:support@aiwallpaper.app",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "隐私政策",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "服务条款",
+          "url": "/terms-of-service"
+        }
+      ]
+    }
+  }
+}
