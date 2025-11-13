@@ -19,6 +19,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="cefBQ8zVjmG522FAyzqcy6CqUBPeXk9aiROdt48VgDY" />
         {googleAdsenseCode && (
           <meta name="google-adsense-account" content={googleAdsenseCode} />
         )}
